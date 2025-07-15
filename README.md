@@ -55,6 +55,26 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
+## Running Tests
+
+This project uses [Vitest](https://vitest.dev/) for unit and UI testing.
+
+### To run all test cases:
+
+```sh
+npx vitest run
+```
+
+### To run tests in watch mode (recommended during development):
+
+```sh
+npx vitest
+```
+
+Test files are located in the `src/__tests__/` directory.
+
+---
+
 ## Notes
 
 - Only **login**, **signup**, and **dashboard** flows are fully configured.
@@ -82,11 +102,14 @@ src/
     Login.tsx
     Signup.tsx
     UploadDocument.tsx
+  __tests__/
+    pages/
+      Login.test.tsx
+      Signup.test.tsx
   store.ts
   App.tsx
   main.tsx
   index.css
 ```
 
----
 
