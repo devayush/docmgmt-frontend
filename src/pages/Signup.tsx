@@ -36,7 +36,7 @@ const Signup = () => {
     <div className="container d-flex align-items-center justify-content-center min-vh-100">
       <div className="w-100" style={{ maxWidth: 400 }}>
         <div className="card shadow p-4">
-          <h2 className="mb-4 text-center">Sign Up</h2>
+          <h2 className="mb-4 text-center">DocMgt 📚</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label className="form-label fw-bold">Name</label>

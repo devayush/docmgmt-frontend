@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useAppDispatch } from '../hooks/useAppDispatch';
 import { useAppSelector } from '../hooks/useAppSelector';
 import { loginUser, fetchUser } from '../features/auth/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 type LoginFormInputs = {
@@ -30,13 +30,13 @@ const Login = () => {
       dispatch(fetchUser());
       navigate('/dashboard');
     }
-  }, [token, navigate]);
+  }, [token, navigate, dispatch]);
 
   return (
     <div className="container d-flex align-items-center justify-content-center min-vh-100">
       <div className="w-100" style={{ maxWidth: 400 }}>
         <div className="card shadow p-4">
-          <h2 className="mb-4 text-center">Login</h2>
+          <h2 className="mb-4 text-center">DocMgt 📚</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label fw-bold">
@@ -47,6 +47,7 @@ const Login = () => {
                 type="email"
                 {...register('email', { required: 'Email is required' })}
                 className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                autoFocus
               />
               {errors.email && (
                 <div className="invalid-feedback">{errors.email.message}</div>
@@ -75,6 +76,12 @@ const Login = () => {
               {loading ? 'Logging in...' : 'Login'}
             </button>
           </form>
+          <div className="text-center mt-3">
+            <span>Don't have an account? </span>
+            <Link to="/signup" className="fw-bold text-primary">
+              Sign Up
+            </Link>
+          </div>
         </div>
       </div>
     </div>
