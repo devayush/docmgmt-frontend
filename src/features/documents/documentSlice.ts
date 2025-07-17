@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { uploadDocumentApi } from '../../api/documents';
+import { uploadDocumentApi } from '../../api/document';
 
 interface DocumentState {
   uploading: boolean;

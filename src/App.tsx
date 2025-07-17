@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import PrivateRoute from './routes/PrivateRoute';
 import Signup from './pages/Signup';
-import Dashboard from './pages/Dashboard'; // Placeholder for protected page
+import Dashboard from './pages/Dashboard'; 
 import UploadDocument from './pages/UploadDocument';
+import DocumentList from './pages/DocumentList';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         {/* Protected Routes */}
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/documents" element={<DocumentList />} />
           <Route path="/upload" element={<UploadDocument />} />
         </Route>
 

@@ -16,3 +16,8 @@ export const uploadDocumentApi = async (data: {
 
   return response.data;
 };
+
+export const getDocumentsApi = async (page = 1, limit = 20) => {
+  const response = await axios.get(`/documents?page=${page}&limit=${limit}`);
+  return response.data;
+};
