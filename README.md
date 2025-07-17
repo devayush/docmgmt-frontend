@@ -44,7 +44,7 @@ You can run the frontend in a Docker container using **docker-compose**:
 ### 1. **Build and run with Docker Compose**
 
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 
 ### 2. **Access the app**
