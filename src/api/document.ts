@@ -10,9 +10,7 @@ export const uploadDocumentApi = async (data: {
   formData.append('content', data.content);
   formData.append('file', data.file);
 
-  const response = await axios.post('/documents', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-  });
+  const response = await axios.post('/documents', formData);
 
   return response.data;
 };
